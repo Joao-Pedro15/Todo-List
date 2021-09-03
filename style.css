@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body{
+    font-size: 1.2rem;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+
+}
+
+.container{
+    margin-top: 70px;
+    background-color: grey;
+    width: 60%;
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.content1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     width: 60%;
+     position: relative;
+}
+
+.content1 #inputTask{
+    width: 380px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: black;
+    outline: none;
+    border: none;
+    padding: 15px;
+}
+
+.content1 .btnAddTask{
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 900;
+    cursor: pointer;
+
+}
+
+.content1 .btnAddTask:hover{
+    background-color: rgb(73, 73, 73);
+}
+
+.content1 .btnAddTask::before{
+    content: '+';
+    font-size: 1.3rem;
+}
+
+.content2{
+    
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content2 #list{
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+.content2 #list li{
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.content2 .removeEdit{
+    display: flex;
+    gap: 10px;
+}
+
+.content2 .remove, .content2 .edit{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: grey;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+}
+
+.content2 .remove:hover, .content2 .edit:hover{
+    background-color: rgb(209, 195, 195);
+}
+
+.remove::before{
+    content: '\1F5D1';
+}
+
+.edit::before{
+    content: '\1F589';
+}
+
+
+.screenEdit{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(83, 76, 76, .5);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content3{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    position: relative;
+    width: 40%;
+    height: 40%;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    margin-top: 70px;
+    
+}
+
+.content3 #editInputTask{
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    margin-top: 60px;
+}
+
+.content3 .buttons input{
+    color: black;
+    font-weight: 800;
+    width: 100px;
+    height: 32px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    position: relative;
+    top: 20px;
+    left: 50%;
+    cursor: pointer;
+}
+
+.buttons #btnSaveEdit{
+    background-color: rgb(54, 161, 54);
+}
+
+.buttons #btnCancelEdit{
+    background-color: rgb(218, 70, 70);
+}
+
+.buttons #btnSaveEdit:hover{
+    background-color: rgb(23, 129, 23);
+}
+
+.buttons #btnCancelEdit:hover{
+    background-color: rgb(129, 41, 41);
+}
+
+.screenEdit.open{
+    display: flex;
+}
+
+
+
+
